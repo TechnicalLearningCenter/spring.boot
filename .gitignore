@@ -1,5 +1,5 @@
-chapter-1/.idea/
+.idea/
 chapter-1/spring-boot-chapter-1.iml
 chapter-1/spring-boot-lifecycle-event.iml
-.idea/
-
+chapter-1/target/
+chapter-1/.idea
