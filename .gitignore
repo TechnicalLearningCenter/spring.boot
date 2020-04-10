@@ -3,3 +3,6 @@ chapter-1/spring-boot-chapter-1.iml
 chapter-1/spring-boot-lifecycle-event.iml
 chapter-1/target/
 chapter-1/.idea
+
+chapter-2/logging/spring-boot-chapter-2.iml
+chapter-2/logging/target/
