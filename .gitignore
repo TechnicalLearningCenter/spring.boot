@@ -6,3 +6,6 @@ chapter-1/.idea
 
 chapter-2/logging/spring-boot-chapter-2.iml
 chapter-2/logging/target/
+
+ioc/target
+ioc/spring-boot-ioc.iml
