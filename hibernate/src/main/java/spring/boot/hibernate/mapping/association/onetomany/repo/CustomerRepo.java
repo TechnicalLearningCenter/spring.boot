@@ -20,7 +20,7 @@ public class CustomerRepo {
     @Autowired
     private SessionFactory sessionFactory;
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
+//    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void saveOrUpdateEmployee(Customer customer) {
         Session currentSession = sessionFactory.getCurrentSession();
         currentSession.save(customer);

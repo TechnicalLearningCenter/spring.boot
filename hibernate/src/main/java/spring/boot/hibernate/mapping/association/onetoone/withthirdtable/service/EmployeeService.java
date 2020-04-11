@@ -1,8 +1,8 @@
 package spring.boot.hibernate.mapping.association.onetoone.withthirdtable.service;
 
-import spring.boot.hibernate.mapping.association.onetoone.withthirdtable.domain.Address;
-import spring.boot.hibernate.mapping.association.onetoone.withthirdtable.domain.Employee;
-import spring.boot.hibernate.mapping.association.onetoone.withthirdtable.repo.EmployeeRepo;
+import com.pnakaj.spring.hibernate.mapping.association.onetoone.withthirdtable.domain.Address;
+import com.pnakaj.spring.hibernate.mapping.association.onetoone.withthirdtable.domain.Employee;
+import com.pnakaj.spring.hibernate.mapping.association.onetoone.withthirdtable.repo.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;

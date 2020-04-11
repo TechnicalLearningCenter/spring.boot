@@ -19,7 +19,7 @@ import java.util.Properties;
  * Created by pankaj on 2/27/2017.
  */
 @Configuration
-@ComponentScan("spring.boot.hibernate.mapping.association.onetoone.withthirdtable")
+@ComponentScan("com.pnakaj.spring.hibernate.mapping.association.onetoone.withthirdtable")
 @EnableTransactionManagement
 public class AppConfig {
 
@@ -44,7 +44,7 @@ public class AppConfig {
     public LocalSessionFactoryBean getLocalSessionFactory() {
         AnnotationSessionFactoryBean localSessionFactoryBean = new AnnotationSessionFactoryBean();
         localSessionFactoryBean.setDataSource(getBasicDataSource());
-        localSessionFactoryBean.setPackagesToScan("spring.boot.hibernate.mapping.association.onetoone.withthirdtablet.domain");
+        localSessionFactoryBean.setPackagesToScan("com.pnakaj.spring.hibernate.mapping.association.onetoone.withthirdtablet.domain");
         Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
         hibernateProperties.put("hibernate.current_session_context_class", "thread");

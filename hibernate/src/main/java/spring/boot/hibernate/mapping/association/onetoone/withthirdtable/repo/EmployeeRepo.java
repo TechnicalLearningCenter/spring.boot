@@ -1,7 +1,7 @@
 package spring.boot.hibernate.mapping.association.onetoone.withthirdtable.repo;
 
-import spring.boot.hibernate.mapping.association.onetoone.withthirdtable.domain.Address;
-import spring.boot.hibernate.mapping.association.onetoone.withthirdtable.domain.Employee;
+import com.pnakaj.spring.hibernate.mapping.association.onetoone.withthirdtable.domain.Address;
+import com.pnakaj.spring.hibernate.mapping.association.onetoone.withthirdtable.domain.Employee;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.classic.Session;

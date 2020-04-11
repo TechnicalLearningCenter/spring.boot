@@ -19,7 +19,7 @@ import java.util.Properties;
  * Created by pankaj on 2/27/2017.
  */
 @Configuration
-@ComponentScan("spring.boot.hibernate.concept")
+@ComponentScan("com.pnakaj.spring.hibernate.concept")
 @EnableTransactionManagement
 public class AppConfig {
 
@@ -39,12 +39,12 @@ public class AppConfig {
         return  new HibernateTransactionManager(sessionFactory);
     }
 
-
+    @Bean
     @DependsOn("dataSource")
     public LocalSessionFactoryBean getLocalSessionFactory() {
         AnnotationSessionFactoryBean localSessionFactoryBean = new AnnotationSessionFactoryBean();
         localSessionFactoryBean.setDataSource(getBasicDataSource());
-        localSessionFactoryBean.setPackagesToScan("spring.boot.hibernate.concept.domain");
+        localSessionFactoryBean.setPackagesToScan("com.pnakaj.spring.hibernate.concept.domain");
         Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
         hibernateProperties.put("hibernate.current_session_context_class", "thread");
