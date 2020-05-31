@@ -25,7 +25,21 @@ public class EmployeeService {
         List<Book> books = new ArrayList<>();
         employeeRepo.findAll().forEach(books::add);
         return  books;
-
     }
 
+    public Book getBookByNameAndType(String name,String type){
+        return employeeRepo.findByNameAndType(name,type).orElseGet(() -> new Book("temp","temp"));
+    }
+
+    public Book getBookByNameOrType(String name, String type) {
+        return employeeRepo.findBookByNameOrType(name,type);
+    }
+
+    public Book findBookByTypeWhichContains(String type) {
+        return employeeRepo.findBookByTypeContaining("Dealer");
+    }
+
+    public Book getBookByIdAfter(Integer id) {
+        return employeeRepo.findBookByIdAfter(id);
+    }
 }

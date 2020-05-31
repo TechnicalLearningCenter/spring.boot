@@ -19,13 +19,31 @@ public class SpringBootRunner implements CommandLineRunner {
     public void run(String... strings) throws Exception {
         System.out.println("----------------------------------------------start------------------------------------------");
 
-        service.saveEmployee(new Book("pankaj1","Customer"));
-        service.saveEmployee(new Book("pankaj2","Customer"));
-        service.saveEmployee(new Book("pankaj3","customer"));
-        service.saveEmployee(new Book("pankaj4","Customer"));
-        service.saveEmployee(new Book("pankaj5","customer"));
-        service.saveEmployee(new Book("pankaj6","customer"));
-        service.getAllEmployee().forEach(System.out::println);
+        service.saveEmployee(new Book("pankaj1","Customer1"));
+        service.saveEmployee(new Book("pankaj2","Customer2"));
+        service.saveEmployee(new Book("pankaj3","customer3"));
+        service.saveEmployee(new Book("pankaj4","Customer4"));
+        service.saveEmployee(new Book("pankaj5","customer5"));
+        service.saveEmployee(new Book("pankaj6","PermanentDealer"));
+
+//        findAll
+//        service.getAllEmployee().forEach(System.out::println);
+
+//        AndCondition
+//        System.out.println(service.getBookByNameAndType("pankaj1","Customer"));
+
+//        or Condition
+//        System.out.println(service.getBookByNameOrType("pankaj1","anyType"));
+//        System.out.println(service.getBookByNameOrType("anyName","Customer1"));
+
+        //TODO: After
+        System.out.println(service.getBookByIdAfter(5));
+        //TODO: Before
+
+//        Containing
+//        System.out.println(service.findBookByTypeWhichContains("Deale"));
+
+
 
         System.out.println("----------------------------------------------end------------------------------------------");
     }
