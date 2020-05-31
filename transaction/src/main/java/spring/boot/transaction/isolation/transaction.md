@@ -1,7 +1,8 @@
 A dirty read occurs when one transaction reads changes made by another transaction that haven’t yet
-been committed (see Table 13-2). Basically, a dirty read means reading uncommitted data.
+been committed Basically, a dirty read means reading uncommitted data.
 
-Table 13-2. Dirty Read: A Transaction Reading Uncommitted Data
+Dirty Read: A Transaction Reading Uncommitted Data
+
 Time Transaction Account
 T1 Transaction 1 begins.
 T2 Transaction 2 begins.
@@ -13,9 +14,10 @@ T6 Transaction 2 commits.
 
 An unrepeatable read occurs when a transaction reads a record twice, and the record state is different
 between the first and the second read. This happens when another transaction updates the state of the
-record between the two reads (see Table 13-3).
+record between the two reads.
 
-Table 13-3. Unrepeatable Read: A Transaction Reading a Record Twice
+Unrepeatable Read: A Transaction Reading a Record Twice
+
 Time Transaction Account
 T1 Transaction 1 begins.
 T2 Transaction 1 reads record R1.
@@ -31,7 +33,8 @@ A phantom read occurs when a transaction executes two identical queries, and the
 returned by the second query is different from the first. It also happens when another transaction inserts
 records into or deletes records from the table between the two reads.
 
-Table 13-4. Phantom Read: Reading a Range of Data That Changes in Size During a Transaction
+Phantom Read: Reading a Range of Data That Changes in Size During a Transaction
+
 Time Transaction Account
 T1 Transaction 1 begins.
 T2 Transaction 1 reads a range of records RG1.

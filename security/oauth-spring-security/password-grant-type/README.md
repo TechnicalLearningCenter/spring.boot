@@ -21,10 +21,11 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	}
 }
 
+curl localhost:8989/foo
 
 And then we can use the user credentials to obtain a token, as below:
 
-curl -X POST --user my-trusted-client:mysecret localhost:8081/oauth/token -d 'grant_type=password&username=gwidgets&password=gwidgets' -H "Accept: application/json"
+curl -X POST --user my-trusted-client:mysecret http://localhost:8081/oauth/token -d 'grant_type=password&username=gwidgets&password=gwidgets' -H "Accept: application/json"
 Response:
 {
   "access_token": "3670fea1-eab3-4981-b80a-e5c57203b20e",
