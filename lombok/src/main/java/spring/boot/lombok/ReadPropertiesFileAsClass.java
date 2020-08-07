@@ -9,11 +9,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "spring.boot.readPropertiesFileAsClass")
+@ComponentScan(basePackages = "spring.boot.lombok")
 
 public class ReadPropertiesFileAsClass {
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(ReadPropertiesFileAsClass.class);
         app.run(args);
+
     }
 }
